@@ -1,0 +1,25 @@
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(var(--secondary-text-color));
+  font-size: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+nav a:hover {
+  color: rgb(var(--primary-text-color));
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}

@@ -1,0 +1,10 @@
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo img:hover {
+    transform: scale(1.1) rotate(360deg);
+    transition: transform 0.7s ease;
+}
+
