@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import SectionHeader from "../components/layout/SectionHeader/SectionHeader";
 import InfoSection from "../components/layout/MainContent/InfoSection";
 
 export default function Example() {
-    const sectionHeaderInfo = {
+  useEffect(() => {
+    document.title = "Exemplo";
+  }, []);
+
+  const sectionHeaderInfo = {
     mainTitle: "Exemplo",
     subtitles: ["Exemplo Pagina", "Exemplo código"],
   };
@@ -41,7 +46,10 @@ export default function Example() {
 
   return (
     <>
-      <SectionHeader title={sectionHeaderInfo.mainTitle} subtitles={sectionHeaderInfo.subtitles} />
+      <SectionHeader
+        title={sectionHeaderInfo.mainTitle}
+        subtitles={sectionHeaderInfo.subtitles}
+      />
       <InfoSection blocos={contentBlocks} />
     </>
   );

@@ -1,53 +1,70 @@
+import { useEffect } from "react";
 import SectionHeader from "../components/layout/SectionHeader/SectionHeader";
 import InfoSection from "../components/layout/MainContent/InfoSection";
 
 export default function WebApplication() {
+  useEffect(() => {
+    document.title = "Aplicação Web";
+  }, []);
+
   const sectionHeaderInfo = {
     mainTitle: "Aplicação Web",
     subtitles: ["Uso", "Resultado"],
   };
 
-  const contentBlocks = [
+  const contentBlocksA = [
+    {
+      titulo: "Uso",
+      conteudo: (
+        <p>
+          React é utilizado na programação web para desenvolver interfaces de
+          forma estruturada, modular e eficiente. A biblioteca organiza a
+          aplicação em componentes independentes, permitindo a reutilização de
+          elementos e facilitando a manutenção do código. A gestão de estado
+          integrada possibilita que a interface responda a mudanças nos dados em
+          tempo real, garantindo uma experiência fluida para o usuário e
+          reduzindo a complexidade do desenvolvimento.
+        </p>
+      ),
+    },
     {
       titulo: "Resultado",
       conteudo: (
         <form>
-          <label>
-            Name: <input type="text" />
-          </label>
-          <br />
-          <label>
-            Age:
-            <select>
-              <option>18</option>
-              <option>19</option>
-              <option>20</option>
-            </select>
-          </label>
-          <br />
-          <label>
-            Birthdate: <input type="date" />
-          </label>
-          <br />
-          <label>
-            Address: <input type="text" />
-          </label>
-          <br />
-          <label>
-            Message: <textarea />
-          </label>
-          <br />
-          <button type="reset">Clear</button>
-          <button type="submit">Send</button>
+          <label htmlFor="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" />
+
+          <label htmlFor="nascimento">Nascimento:</label>
+          <input type="date" id="nascimento" name="nascimento" />
+
+          <label htmlFor="idade">Sexo:</label>
+          <select id="idade" name="idade">
+            <option value="">Selecione</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+          </select>
+
+          <label htmlFor="endereco">Endereço:</label>
+          <input type="text" id="endereco" name="endereco" />
+
+          <label htmlFor="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem"></textarea>
+
+          <button type="reset">Limpar</button>
+          <button type="submit">Enviar</button>
         </form>
-      )
+      ),
     },
   ];
 
   return (
     <>
-      <SectionHeader title={sectionHeaderInfo.mainTitle} subtitles={sectionHeaderInfo.subtitles} />
-      <InfoSection blocos={contentBlocks} />
+      <SectionHeader
+        title={sectionHeaderInfo.mainTitle}
+        subtitles={sectionHeaderInfo.subtitles}
+      />
+      <InfoSection blocos={contentBlocksA} />
     </>
   );
 }

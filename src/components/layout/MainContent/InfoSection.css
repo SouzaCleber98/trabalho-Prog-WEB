@@ -1,5 +1,17 @@
 .info-section {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   padding: 20px;
+  background-color: rgb(var(--primary-support-color));
+  margin: 20px;
+  gap: 40px;
+}
+
+.info-section:has(table) {
+  background-color: transparent;
+}
+
+.info-section:has(form) {
+  flex-direction: column;
 }

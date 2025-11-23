@@ -1,5 +1,5 @@
 import InfoBlock from "./InfoBlock";
-import './InfoSection.css'
+import "./InfoSection.css";
 
 export default function InfoSection({ blocos }) {
   return (

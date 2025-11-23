@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import SectionHeader from "../components/layout/SectionHeader/SectionHeader";
 import InfoSection from "../components/layout/MainContent/InfoSection";
 
 export default function Concepts() {
+  useEffect(() => {
+    document.title = "Conceitos";
+  }, []);
+
   const sectionHeaderInfo = {
     mainTitle: "Conceitos",
     subtitles: ["Props", "State"],
@@ -42,7 +47,10 @@ export default function Concepts() {
 
   return (
     <>
-      <SectionHeader title={sectionHeaderInfo.mainTitle} subtitles={sectionHeaderInfo.subtitles} />
+      <SectionHeader
+        title={sectionHeaderInfo.mainTitle}
+        subtitles={sectionHeaderInfo.subtitles}
+      />
       <InfoSection blocos={contentBlocks} />
     </>
   );

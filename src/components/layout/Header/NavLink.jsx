@@ -1,4 +1,4 @@
-import './NavLink.css'
+import "./NavLink.css";
 
 function NavLink({ links }) {
   return (

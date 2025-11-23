@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  background: rgb(var(--background-color));
+  background-color: rgb(var(--primary-color));
   top: 0;
   left: 0;
   width: 100%;
@@ -10,15 +10,14 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
 }
 
 .logo {
-    flex: 0 0 auto; 
+  flex: 0 0 auto;
 }
 
 .nav-container {
-    flex: 1;
-    display: flex;
-    gap: 30px;
+  flex: 1;
+  display: flex;
 }
