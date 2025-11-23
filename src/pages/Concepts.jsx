@@ -18,26 +18,26 @@ export default function Concepts() {
         <table>
           <thead>
             <tr>
-              <th>Difference</th>
+              <th>Diferença</th>
               <th>Props</th>
               <th>State</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Origin</td>
-              <td>Comes from parent</td>
-              <td>Belongs to component</td>
+              <td>Origim</td>
+              <td>Vêm do componente pai</td>
+              <td>Pertence ao próprio componente</td>
             </tr>
             <tr>
-              <td>Mutability</td>
-              <td>Immutable</td>
-              <td>Mutable</td>
+              <td>Mutabilidade</td>
+              <td>Imutáveis</td>
+              <td>Mutáveis</td>
             </tr>
             <tr>
-              <td>Who changes</td>
-              <td>Only parent</td>
-              <td>Component itself</td>
+              <td>Quem altera</td>
+              <td>Apenas o componente pai</td>
+              <td>O próprio componente</td>
             </tr>
           </tbody>
         </table>

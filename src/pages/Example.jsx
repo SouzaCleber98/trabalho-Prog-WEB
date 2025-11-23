@@ -9,7 +9,7 @@ export default function Example() {
 
   const sectionHeaderInfo = {
     mainTitle: "Exemplo",
-    subtitles: ["Exemplo Pagina", "Exemplo código"],
+    subtitles: ["Exemplo Página", "Exemplo código"],
   };
 
   const contentBlocks = [
