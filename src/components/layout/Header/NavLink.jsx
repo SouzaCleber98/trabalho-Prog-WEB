@@ -1,3 +1,4 @@
+import { NavLink as Link } from "react-router-dom";
 import "./NavLink.css";
 
 function NavLink({ links }) {
@@ -6,7 +7,12 @@ function NavLink({ links }) {
       <ul>
         {links.map((link) => (
           <li key={link.href}>
-            <a href={link.href}>{link.label}</a>
+            <Link
+              to={link.href}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              {link.label}
+            </Link>
           </li>
         ))}
       </ul>
