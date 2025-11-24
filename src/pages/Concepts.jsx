@@ -5,7 +5,13 @@ import SectionHeader from "../components/layout/SectionHeader/SectionHeader";
 import InfoSection from "../components/layout/MainContent/InfoSection";
 
 // Content data
-import { sectionHeaderInfo, contentBlocks } from "../data/conceptsData";
+import {
+  sectionHeaderInfo,
+  contentBlocks,
+  sectionHeaderInfoExtra,
+  contentBlocksExtra,
+  sidebarLinks,
+} from "../data/conceptsData";
 
 export default function Concepts() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +24,7 @@ export default function Concepts() {
   return (
     <>
       <Sidebar
-        links={sectionHeaderInfo.subtitles}
+        links={sidebarLinks}
         isOpen={isOpen}
         toggleSidebar={toggleSidebar}
       />
@@ -28,6 +34,12 @@ export default function Concepts() {
         subtitles={sectionHeaderInfo.subtitles}
       />
       <InfoSection blocos={contentBlocks} />
+
+      <SectionHeader
+        title={sectionHeaderInfoExtra.mainTitle}
+        subtitles={sectionHeaderInfoExtra.subtitles}
+      />
+      <InfoSection blocos={contentBlocksExtra} />
     </>
   );
 }
