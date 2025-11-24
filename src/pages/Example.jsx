@@ -1,51 +1,28 @@
+import { useState } from "react";
 import { useEffect } from "react";
+import Sidebar from "../components/ui/SideBar/SideBar";
 import SectionHeader from "../components/layout/SectionHeader/SectionHeader";
 import InfoSection from "../components/layout/MainContent/InfoSection";
 
+// Content data
+import { sectionHeaderInfo, contentBlocks } from "../data/exampleData";
+
 export default function Example() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleSidebar = () => setIsOpen(!isOpen);
+
   useEffect(() => {
     document.title = "Exemplo";
   }, []);
 
-  const sectionHeaderInfo = {
-    mainTitle: "Exemplo",
-    subtitles: ["Exemplo Página", "Exemplo código"],
-  };
-
-  const contentBlocks = [
-    {
-      titulo: "Page Title",
-      conteudo: (
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dicta
-          modi non? Pariatur atque quod ab odio ipsam velit. Nisi rerum
-          doloribus odio accusamus explicabo totam laboriosam libero dignissimos
-          voluptatibus?
-        </p>
-      ),
-    },
-    {
-      titulo: "HTML Example",
-      conteudo: (
-        <pre>
-          {`<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Web Example</title>
-</head>
-<body>
-  <h1>User Title</h1>
-  <div id="load-data">Load Data</div>
-</body>
-</html>`}
-        </pre>
-      ),
-    },
-  ];
-
   return (
     <>
+      <Sidebar
+        links={sectionHeaderInfo.subtitles}
+        isOpen={isOpen}
+        toggleSidebar={toggleSidebar}
+      />
+
       <SectionHeader
         title={sectionHeaderInfo.mainTitle}
         subtitles={sectionHeaderInfo.subtitles}

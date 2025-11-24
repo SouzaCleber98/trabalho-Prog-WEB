@@ -9,6 +9,7 @@
 .info-title {
   color: rgb(var(--primary-text-color));
   font-size: 1.5rem;
+  scroll-margin-top: 80px;
 }
 
 .info-content {

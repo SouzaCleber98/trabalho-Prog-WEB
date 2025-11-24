@@ -1,52 +1,28 @@
+import { useState } from "react";
 import { useEffect } from "react";
+import Sidebar from "../components/ui/SideBar/SideBar";
 import SectionHeader from "../components/layout/SectionHeader/SectionHeader";
 import InfoSection from "../components/layout/MainContent/InfoSection";
 
+// Content data
+import { sectionHeaderInfo, contentBlocks } from "../data/conceptsData";
+
 export default function Concepts() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleSidebar = () => setIsOpen(!isOpen);
+
   useEffect(() => {
     document.title = "Conceitos";
   }, []);
 
-  const sectionHeaderInfo = {
-    mainTitle: "Conceitos",
-    subtitles: ["Props", "State"],
-  };
-
-  const contentBlocks = [
-    {
-      conteudo: (
-        <table>
-          <thead>
-            <tr>
-              <th>Diferença</th>
-              <th>Props</th>
-              <th>State</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Origim</td>
-              <td>Vêm do componente pai</td>
-              <td>Pertence ao próprio componente</td>
-            </tr>
-            <tr>
-              <td>Mutabilidade</td>
-              <td>Imutáveis</td>
-              <td>Mutáveis</td>
-            </tr>
-            <tr>
-              <td>Quem altera</td>
-              <td>Apenas o componente pai</td>
-              <td>O próprio componente</td>
-            </tr>
-          </tbody>
-        </table>
-      ),
-    },
-  ];
-
   return (
     <>
+      <Sidebar
+        links={sectionHeaderInfo.subtitles}
+        isOpen={isOpen}
+        toggleSidebar={toggleSidebar}
+      />
+
       <SectionHeader
         title={sectionHeaderInfo.mainTitle}
         subtitles={sectionHeaderInfo.subtitles}
