@@ -23,21 +23,21 @@ const contentBlocks = [
     conteudo: (
       <form>
         <label htmlFor="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" />
+        <input type="text" id="nome" name="nome" required />
 
         <label htmlFor="nascimento">Nascimento:</label>
-        <input type="date" id="nascimento" name="nascimento" />
+        <input type="date" id="nascimento" name="nascimento" required />
 
-        <label htmlFor="idade">Sexo:</label>
-        <select id="idade" name="idade">
+        <label htmlFor="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
           <option value="">Selecione</option>
-          <option>18</option>
-          <option>19</option>
-          <option>20</option>
+          <option>M</option>
+          <option>F</option>
+          <option>Outro</option>
         </select>
 
         <label htmlFor="endereco">Endereço:</label>
-        <input type="text" id="endereco" name="endereco" />
+        <input type="text" id="endereco" name="endereco" required />
 
         <label htmlFor="mensagem">Mensagem:</label>
         <textarea id="mensagem" name="mensagem"></textarea>
