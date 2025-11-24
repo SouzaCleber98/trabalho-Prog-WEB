@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Logo from "./Logo";
 import NavLink from "./NavLink";
 import "./Header.css";
@@ -10,10 +11,20 @@ const navLinks = [
 ];
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="header">
       <Logo />
-      <div className="nav-container">
+      <button
+        className={`hamburger ${isOpen ? "open" : ""}`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div className={`nav-container ${isOpen ? "show" : ""}`}>
         <NavLink links={navLinks} />
       </div>
     </header>

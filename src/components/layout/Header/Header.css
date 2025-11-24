@@ -20,4 +20,83 @@
 .nav-container {
   flex: 1;
   display: flex;
+  justify-content: flex-end;
+}
+
+.nav-container a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-container a:hover {
+  color: #ddd;
+}
+
+/* Botão hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-container {
+    display: none;
+    position: absolute;
+    top: 60px;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 6px;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-container.show {
+    display: flex;
+    max-height: 300px;
+  }
+
+  .nav-container a {
+    color: #333;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .nav-container a:hover {
+    color: rgb(var(--primary-color));
+  }
 }

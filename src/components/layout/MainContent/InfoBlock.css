@@ -75,3 +75,56 @@ textarea {
 button {
   background-color: rgb(var(--primary-text-color));
 }
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-title {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .info-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-content p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  form {
+    flex-direction: column;
+    width: 100%;
+    padding: 16px;
+  }
+
+  .form-area {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .info-content table {
+    font-size: 0.9rem;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
