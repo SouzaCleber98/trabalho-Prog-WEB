@@ -7,30 +7,17 @@ const contentBlocks = [
   {
     titulo: "Exemplo Página",
     conteudo: (
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dicta
-        modi non? Pariatur atque quod ab odio ipsam velit. Nisi rerum doloribus
-        odio accusamus explicabo totam laboriosam libero dignissimos
-        voluptatibus?
-      </p>
+      <div>
+        <img src="src\assets\images\example.bmp" alt="Exemplo Página" />
+      </div>
     ),
   },
   {
     titulo: "Exemplo código",
     conteudo: (
-      <pre>
-        {`<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Web Example</title>
-</head>
-<body>
-  <h1>User Title</h1>
-  <div id="load-data">Load Data</div>
-</body>
-</html>`}
-      </pre>
+      <div>
+        <img src="src\assets\images\codeExample.png" alt="Exemplo Código" />
+      </div>
     ),
   },
 ];

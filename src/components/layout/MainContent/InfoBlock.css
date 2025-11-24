@@ -36,6 +36,14 @@
   background-color: rgb(var(--primary-support-color));
 }
 
+.info-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 10px auto;
+}
+
 /* Form */
 form {
   flex: 1;
@@ -98,6 +106,10 @@ button {
   .info-content p {
     font-size: 1rem;
     text-align: center;
+  }
+
+  .info-content img {
+    max-width: 90%;
   }
 
   form {
