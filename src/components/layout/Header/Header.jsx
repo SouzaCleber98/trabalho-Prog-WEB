@@ -16,10 +16,7 @@ function Header() {
   return (
     <header className="header">
       <Logo />
-      <button
-        className={`hamburger ${isOpen ? "open" : ""}`}
-        onClick={() => setIsOpen(!isOpen)}
-      >
+      <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
         <span></span>
         <span></span>
         <span></span>
