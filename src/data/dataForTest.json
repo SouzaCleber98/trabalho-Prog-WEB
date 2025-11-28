@@ -1,0 +1,253 @@
+{
+  "contentSections": [
+    {
+      "header": {
+        "mainTitle": "Fundamentos da Arquitetura",
+        "subtitles": ["Ciclo de Vida", "Renderização"]
+      },
+      "blocks": [
+        {
+          "titulo": "O Ciclo de Vida do React",
+          "conteudo": [
+            {
+              "tipo": "p",
+              "texto": "O ciclo de vida de um componente React é uma série de eventos que ocorrem desde o nascimento do componente (montagem) até sua morte (desmontagem). Compreender esse fluxo é vital para otimizar a performance e evitar memory leaks."
+            },
+            {
+              "tipo": "img",
+              "src": "./src/assets/images/pageExample.bmp",
+              "alt": "Gráfico mostrando as fases de Mounting, Updating e Unmounting"
+            },
+            {
+              "tipo": "p",
+              "texto": "Abaixo, comparamos os métodos de ciclo de vida das classes antigas com os Hooks modernos equivalentes:"
+            },
+            {
+              "tipo": "tabela",
+              "cabecalho": [
+                "Fase",
+                "Método de Classe (Legacy)",
+                "Hook Equivalente",
+                "Quando Ocorre"
+              ],
+              "linhas": [
+                [
+                  "Montagem",
+                  "componentDidMount",
+                  "useEffect(() => {}, [])",
+                  "Logo após a primeira renderização."
+                ],
+                [
+                  "Atualização",
+                  "componentDidUpdate",
+                  "useEffect(() => {}, [deps])",
+                  "Quando props ou state mudam."
+                ],
+                [
+                  "Desmontagem",
+                  "componentWillUnmount",
+                  "useEffect return () => {}",
+                  "Antes do componente ser removido do DOM."
+                ],
+                [
+                  "Erro",
+                  "componentDidCatch",
+                  "N/A (Ainda requer Classes)",
+                  "Quando ocorre um erro na árvore de filhos."
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": {
+        "mainTitle": "Interatividade Avançada",
+        "subtitles": ["Formulários", "Eventos"]
+      },
+      "blocks": [
+        {
+          "titulo": "Cadastro de Desenvolvedor",
+          "conteudo": [
+            {
+              "tipo": "p",
+              "texto": "Este bloco testa a capacidade do sistema de renderizar formulários complexos a partir de um JSON. Preencha os dados abaixo para testar o 'FormData'."
+            },
+            {
+              "tipo": "form",
+              "inputs": [
+                {
+                  "label": "Nome Completo",
+                  "props": {
+                    "type": "text",
+                    "name": "nome",
+                    "placeholder": "Digite seu nome"
+                  }
+                },
+                {
+                  "label": "Data de Nascimento",
+                  "props": { "type": "date", "name": "nascimento" }
+                },
+                {
+                  "label": "Gênero",
+                  "props": { "type": "select", "name": "sexo" },
+                  "options": [
+                    { "val": "nao_informado", "label": "Prefiro não informar" },
+                    { "val": "masculino", "label": "Masculino" },
+                    { "val": "feminino", "label": "Feminino" },
+                    { "val": "outro", "label": "Outro" }
+                  ]
+                },
+                {
+                  "label": "Email Corporativo",
+                  "props": {
+                    "type": "email",
+                    "name": "endereco",
+                    "placeholder": "dev@empresa.com"
+                  }
+                },
+                {
+                  "label": "Bio / Mensagem",
+                  "props": {
+                    "name": "mensagem",
+                    "rows": 4,
+                    "placeholder": "Conte um pouco sobre sua experiência..."
+                  },
+                  "tag": "textarea"
+                }
+              ],
+              "submitText": "Cadastrar Perfil"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": {
+        "mainTitle": "Ecossistema & Ferramentas",
+        "subtitles": ["Bibliotecas Populares", "State Managers"]
+      },
+      "blocks": [
+        {
+          "titulo": "Gerenciadores de Estado",
+          "conteudo": [
+            {
+              "tipo": "p",
+              "texto": "Embora o Context API resolva muitos problemas, aplicações complexas muitas vezes exigem soluções mais robustas. Abaixo estão as bibliotecas mais utilizadas em 2024/2025."
+            },
+            {
+              "tipo": "tabela",
+              "cabecalho": [
+                "Biblioteca",
+                "Paradigma",
+                "Tamanho (Gzip)",
+                "Link"
+              ],
+              "linhas": [
+                ["Redux Toolkit", "Flux / Imutável", "12kb", "Redux.js.org"],
+                [
+                  "Zustand",
+                  "Hook-based / Mutável",
+                  "1.1kb",
+                  "GitHub - Zustand"
+                ],
+                ["Recoil", "Atômico", "14kb", "Recoiljs.org"],
+                ["Jotai", "Atômico / Minimalista", "2.4kb", "Jotai.org"],
+                ["MobX", "Observável / Reativo", "16kb", "MobX.js.org"]
+              ]
+            },
+            {
+              "tipo": "p",
+              "texto": "Para mais detalhes, consulte a documentação oficial do React sobre gerenciamento de estado."
+            },
+            {
+              "tipo": "a",
+              "href": "https://react.dev/learn/managing-state",
+              "texto": "Ir para React.dev - Managing State"
+            }
+          ]
+        },
+        {
+          "titulo": "Visualização de Estrutura",
+          "conteudo": [
+            {
+              "tipo": "img",
+              "src": "./src/assets/images/pageExample.bmp",
+              "alt": "Imagem ilustrativa de pastas src/components, src/hooks, src/utils"
+            },
+            {
+              "tipo": "p",
+              "texto": "Manter uma estrutura de pastas organizada é essencial para a escalabilidade do projeto."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": {
+        "mainTitle": "Performance",
+        "subtitles": ["Métricas Web Vitals"]
+      },
+      "blocks": [
+        {
+          "titulo": "Core Web Vitals",
+          "conteudo": [
+            {
+              "tipo": "p",
+              "texto": "Métricas essenciais para garantir uma boa experiência de usuário e ranqueamento no Google."
+            },
+            {
+              "tipo": "tabela",
+              "cabecalho": [
+                "Sigla",
+                "Nome Completo",
+                "O que mede",
+                "Meta Ideal"
+              ],
+              "linhas": [
+                [
+                  "LCP",
+                  "Largest Contentful Paint",
+                  "Velocidade de carregamento",
+                  "< 2.5s"
+                ],
+                [
+                  "FID",
+                  "First Input Delay",
+                  "Interatividade (sendo substituído pelo INP)",
+                  "< 100ms"
+                ],
+                [
+                  "CLS",
+                  "Cumulative Layout Shift",
+                  "Estabilidade Visual",
+                  "< 0.1"
+                ],
+                [
+                  "INP",
+                  "Interaction to Next Paint",
+                  "Responsividade geral",
+                  "< 200ms"
+                ],
+                [
+                  "TTFB",
+                  "Time to First Byte",
+                  "Resposta do Servidor",
+                  "< 800ms"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sidebarLinks": [
+    "O Ciclo de Vida do React",
+    "Cadastro de Desenvolvedor",
+    "Gerenciadores de Estado",
+    "Visualização de Estrutura",
+    "Core Web Vitals"
+  ]
+}

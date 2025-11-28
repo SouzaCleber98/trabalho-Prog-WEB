@@ -1,0 +1,69 @@
+{
+  "contentSections": [
+    {
+      "header": {
+        "mainTitle": "Conceitos",
+        "subtitles": ["Props x State"]
+      },
+      "blocks": [
+        {
+          "titulo": "Props x State",
+          "conteudo": [
+            {
+              "tipo": "tabela",
+              "cabecalho": ["Diferença", "Props", "State"],
+              "linhas": [
+                [
+                  "Origim",
+                  "Vêm do componente pai",
+                  "Pertence ao próprio componente"
+                ],
+                ["Mutabilidade", "Imutáveis", "Mutáveis"],
+                [
+                  "Quem altera",
+                  "Apenas o componente pai",
+                  "O próprio componente"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": {
+        "mainTitle": "Mais sobre Props e State",
+        "subtitles": ["O que são Props", "O que é State"]
+      },
+      "blocks": [
+        {
+          "titulo": "O que são Props",
+          "conteudo": [
+            {
+              "tipo": "p",
+              "texto": "Props são propriedades que permitem a comunicação\nentre componentes. Elas funcionam como parâmetros que um componente\npai envia para um componente filho, garantindo que o mesmo componente\npossa ser reutilizado em diferentes contextos sem precisar ser\nreescrito. Essa característica torna os componentes altamente\nflexíveis e adaptáveis, já que podem receber dados variados e se\ncomportar de acordo com o que foi definido externamente."
+            },
+            {
+              "tipo": "p",
+              "texto": "Uma das principais características das props é que elas são imutáveis.\nIsso significa que, uma vez recebidas pelo componente, não podem ser\nalteradas internamente. Essa imutabilidade garante maior\nprevisibilidade no fluxo de dados e ajuda a manter a aplicação\norganizada, evitando efeitos colaterais inesperados."
+            }
+          ]
+        },
+        {
+          "titulo": "O que é State",
+          "conteudo": [
+            {
+              "tipo": "p",
+              "texto": "State é o mecanismo interno de um componente para\narmazenar e gerenciar informações que mudam ao longo do tempo. Ele\nrepresenta o \"estado atual\" do componente e é responsável por\ncontrolar dados dinâmicos, como valores que se modificam em resposta a\ninterações do usuário ou eventos do sistema."
+            },
+            {
+              "tipo": "p",
+              "texto": "Diferente das props, o state é mutável e pode ser atualizado pelo\npróprio componente. Cada vez que o state muda, o React re-renderiza o\ncomponente automaticamente, refletindo essas alterações na interface.\nIsso torna o state essencial para criar aplicações interativas e\nresponsivas, já que permite acompanhar e reagir às mudanças de forma\nefetiva."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sidebarLinks": ["Props x State", "O que são Props", "O que é State"]
+}

@@ -1,0 +1,96 @@
+{
+  "contentSections": [
+    {
+      "header": {
+        "mainTitle": "Aplicação Web",
+        "subtitles": ["Uso", "Resultado"]
+      },
+      "blocks": [
+        {
+          "titulo": "Uso",
+          "conteudo": [
+            {
+              "tipo": "p",
+              "texto": "React é utilizado na programação web para desenvolver interfaces de forma estruturada, modular e eficiente. A biblioteca organiza a aplicação em componentes independentes, permitindo a reutilização de elementos e facilitando a manutenção do código. A gestão de estado integrada possibilita que a interface responda a mudanças nos dados em tempo real, garantindo uma experiência fluida para o usuário e reduzindo a complexidade do desenvolvimento."
+            }
+          ]
+        },
+        {
+          "titulo": "Resultado",
+          "conteudo": [
+            {
+              "tipo": "form",
+              "inputs": [
+                {
+                  "label": "Nome:",
+                  "props": {
+                    "type": "text",
+                    "id": "nome",
+                    "name": "nome",
+                    "required": true
+                  }
+                },
+                {
+                  "label": "Nascimento:",
+                  "props": {
+                    "type": "date",
+                    "id": "nascimento",
+                    "name": "nascimento",
+                    "required": true
+                  }
+                },
+                {
+                  "label": "Sexo:",
+                  "props": {
+                    "type": "select",
+                    "id": "sexo",
+                    "name": "sexo",
+                    "required": true
+                  },
+                  "options": [
+                    {
+                      "val": "",
+                      "label": "Selecione"
+                    },
+                    {
+                      "val": "M",
+                      "label": "M"
+                    },
+                    {
+                      "val": "F",
+                      "label": "F"
+                    },
+                    {
+                      "val": "Outro",
+                      "label": "Outro"
+                    }
+                  ]
+                },
+                {
+                  "label": "Endereço:",
+                  "props": {
+                    "type": "text",
+                    "id": "endereco",
+                    "name": "endereco",
+                    "required": true
+                  }
+                },
+                {
+                  "label": "Mensagem:",
+                  "tag": "textarea",
+                  "props": {
+                    "id": "mensagem",
+                    "name": "mensagem"
+                  }
+                }
+              ],
+              "submitText": "Enviar",
+              "resetText": "Limpar"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sidebarLinks": ["Uso", "Resultado"]
+}

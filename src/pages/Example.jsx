@@ -1,11 +1,9 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Sidebar from "../components/ui/SideBar/SideBar";
-import SectionHeader from "../components/layout/SectionHeader/SectionHeader";
-import InfoSection from "../components/layout/MainContent/InfoSection";
+import ContentMapper from "../components/layout/ContentMapper/ContentMapper";
 
 // Content data
-import { sectionHeaderInfo, contentBlocks } from "../data/exampleData";
+import data from "../data/exampleData.json";
 
 export default function Example() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,19 +13,17 @@ export default function Example() {
     document.title = "Exemplo";
   }, []);
 
+  const { contentSections, sidebarLinks } = data;
+
   return (
     <>
       <Sidebar
-        links={sectionHeaderInfo.subtitles}
+        links={sidebarLinks}
         isOpen={isOpen}
         toggleSidebar={toggleSidebar}
       />
 
-      <SectionHeader
-        title={sectionHeaderInfo.mainTitle}
-        subtitles={sectionHeaderInfo.subtitles}
-      />
-      <InfoSection blocos={contentBlocks} />
+      <ContentMapper sections={contentSections} />
     </>
   );
 }

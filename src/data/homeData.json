@@ -1,0 +1,72 @@
+{
+  "contentSections": [
+    {
+      "header": {
+        "mainTitle": "Introdução",
+        "subtitles": ["O que é", "Pra que serve"]
+      },
+      "blocks": [
+        {
+          "titulo": "O que é",
+          "conteudo": [
+            {
+              "tipo": "p",
+              "texto": "React é uma biblioteca JavaScript para construir interfaces que mudam muito, usando componentes que se atualizam sozinhos quando os dados mudam. Ele organiza a página em partes pequenas e independentes, usa um tal de Virtual DOM para deixar tudo rápido e permite criar aplicações inteiras só pensando em como o estado muda ao longo do tempo. Isso torna o desenvolvimento mais previsível e fácil de manter, mesmo em projetos grandes e complexos."
+            }
+          ]
+        },
+        {
+          "titulo": "Pra que serve",
+          "conteudo": [
+            {
+              "tipo": "p",
+              "texto": "Serve para criar interfaces web dinâmicas sem te fazer arrancar os cabelos. Ele ajuda a construir e atualizar elementos da página de forma eficiente, organizar o código em componentes separados e manter o estado da aplicação controlado sem virar um caos completo. Ideal para sites e apps que mudam o conteúdo a toda hora, como redes sociais, plataformas de streaming, e-commerce ou qualquer sistema interativo que precisa responder rápido às ações do usuário."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": {
+        "mainTitle": "Mais sobre React",
+        "subtitles": ["Como funciona", "Principais vantagens", "Ecossistema"]
+      },
+      "blocks": [
+        {
+          "titulo": "Como funciona",
+          "conteudo": [
+            {
+              "tipo": "p",
+              "texto": "O React funciona criando uma representação virtual da interface chamada Virtual DOM. Quando o estado ou os dados mudam, ele compara essa versão virtual com a real e atualiza apenas o que foi alterado, evitando recarregar a página inteira. Isso garante desempenho e uma experiência fluida para o usuário."
+            }
+          ]
+        },
+        {
+          "titulo": "Principais vantagens",
+          "conteudo": [
+            {
+              "tipo": "p",
+              "texto": "Entre as vantagens estão: reutilização de componentes, que economiza tempo e esforço; comunidade ativa e vasta documentação; integração fácil com outras bibliotecas e frameworks; além de suporte para aplicações grandes e escaláveis. Tudo isso torna o React uma escolha popular entre desenvolvedores."
+            }
+          ]
+        },
+        {
+          "titulo": "Ecossistema",
+          "conteudo": [
+            {
+              "tipo": "p",
+              "texto": "O React não anda sozinho: ele faz parte de um ecossistema rico. Ferramentas como React Router ajudam na navegação, Redux ou Context API cuidam do gerenciamento de estado, e frameworks como Next.js permitem criar aplicações completas com renderização no servidor e otimização de SEO."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sidebarLinks": [
+    "O que é",
+    "Pra que serve",
+    "Como funciona",
+    "Principais vantagens",
+    "Ecossistema"
+  ]
+}

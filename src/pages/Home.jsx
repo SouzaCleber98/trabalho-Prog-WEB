@@ -1,17 +1,9 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Sidebar from "../components/ui/SideBar/SideBar";
-import SectionHeader from "../components/layout/SectionHeader/SectionHeader";
-import InfoSection from "../components/layout/MainContent/InfoSection";
+import ContentMapper from "../components/layout/ContentMapper/ContentMapper";
 
 // Content data
-import {
-  sectionHeaderInfo,
-  contentBlocks,
-  sectionHeaderInfoExtra,
-  contentBlocksExtra,
-  sidebarLinks,
-} from "../data/homeData";
+import data from "../data/homeData.json";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +13,8 @@ export default function Home() {
     document.title = "Home";
   }, []);
 
+  const { contentSections, sidebarLinks } = data;
+
   return (
     <>
       <Sidebar
@@ -29,17 +23,7 @@ export default function Home() {
         toggleSidebar={toggleSidebar}
       />
 
-      <SectionHeader
-        title={sectionHeaderInfo.mainTitle}
-        subtitles={sectionHeaderInfo.subtitles}
-      />
-      <InfoSection blocos={contentBlocks} />
-
-      <SectionHeader
-        title={sectionHeaderInfoExtra.mainTitle}
-        subtitles={sectionHeaderInfoExtra.subtitles}
-      />
-      <InfoSection blocos={contentBlocksExtra} />
+      <ContentMapper sections={contentSections} />
     </>
   );
 }

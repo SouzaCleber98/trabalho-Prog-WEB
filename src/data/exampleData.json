@@ -1,0 +1,32 @@
+{
+  "contentSections": [
+    {
+      "header": {
+        "mainTitle": "Exemplo",
+        "subtitles": ["Exemplo Página", "Exemplo código"]
+      },
+      "blocks": [
+        {
+          "titulo": "Exemplo Página",
+          "conteudo": [
+            {
+              "tipo": "img",
+              "src": "./src/assets/images/pageExample.bmp",
+              "alt": "Exemplo Página"
+            }
+          ]
+        },
+        {
+          "titulo": "Exemplo código",
+          "conteudo": [
+            {
+              "tipo": "img",
+              "src": "./src/assets/images/codeExample.png",
+              "alt": "Exemplo Código"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
