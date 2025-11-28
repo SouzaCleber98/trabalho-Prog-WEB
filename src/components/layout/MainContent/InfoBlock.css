@@ -3,7 +3,6 @@
   flex: 1;
   flex-direction: column;
   align-items: center;
-  color: rgb(var(--secondary-text-color));
 }
 
 .info-title {
@@ -15,13 +14,20 @@
 
 .info-content {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .info-content p {
   font-size: 1.25rem;
   font-weight: 900;
 }
-
+/* tabelas */
+.info-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 /* Cabeçalho */
 .info-content thead th {
   background: rgb(var(--primary-table-color));
@@ -33,7 +39,7 @@
 .info-content tbody td {
   padding: 12px 14px;
   vertical-align: middle;
-  background-color: rgb(var(--primary-support-color));
+  background-color: rgb(var(--background-color));
 }
 
 .info-content img {
@@ -49,7 +55,7 @@ form {
   flex: 1;
   width: 900px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   background-color: rgb(var(--background-color));
   padding: 24px;
