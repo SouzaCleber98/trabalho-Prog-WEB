@@ -10,11 +10,23 @@ apresentação.
 
 ### **1. [`main`](https://github.com/SouzaCleber98/trabalho-Prog-WEB/tree/main)**
 
+Para alternar para a branch principal (main), use:
+
+```bash
+git checkout main
+```
+
 Branch principal do repositório.\
 Apenas o README.md está presente aqui, contendo informações sobre o
 projeto, estrutura do repositório e instruções para execução.
 
 ### **2. [`develop`](https://github.com/SouzaCleber98/trabalho-Prog-WEB/tree/develop)**
+
+Para alternar para a branch de desenvolvimento (develop), use:
+
+```bash
+git checkout develop
+```
 
 Branch utilizada durante o desenvolvimento.\
 Aqui está presente o **código do site feito em React**, incluindo:
@@ -26,12 +38,24 @@ Aqui está presente o **código do site feito em React**, incluindo:
 
 ### **3. [`presentation`](https://github.com/SouzaCleber98/trabalho-Prog-WEB/tree/presentation)**
 
+Para alternar para a branch de apresentação (presentation), use:
+
+```bash
+git checkout presentation
+```
+
 Branch destinada ao material de apresentação.\
 Contém:
 
 - Arquivo **PDF** com os slides usados na apresentação do projeto em sala de aula.
 
 ### **4. [`prototype`](https://github.com/SouzaCleber98/trabalho-Prog-WEB/tree/prototype)**
+
+Para alternar para a branch de protótipo (prototype), use:
+
+```bash
+git checkout prototype
+```
 
 Branch voltada para o processo de criação visual.\
 Aqui estão armazenadas as **imagens, rascunhos e protótipos** utilizados
